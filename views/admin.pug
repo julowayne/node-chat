@@ -1,0 +1,34 @@
+html
+  head
+    title Back-office
+    meta(charset="utf-8")
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  body
+    include nav.pug
+    .container
+     #list
+      h1 Liste des utilisateurs
+      table.table.table-hover.align-items-center
+        thead
+          tr
+          th(scope='col') #
+          th(scope='col') Pseudo
+          th(scope='col') Date de naissance
+          th(scope='col') Email
+        tbody
+          tr
+          th(scope='row') 1
+          td Jules
+          td 11/07/1991
+          td jules@hotmail.com
+          tr
+          th(scope='row') 2
+          td Marc
+          td 29/06/1990
+          td marc@hotmail.com
+          tr
+          th(scope='row') 3
+          td Pierre
+          td 20/08/1985
+          td pierre@hotmail.com

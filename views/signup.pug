@@ -1,0 +1,31 @@
+html
+    head
+        title Connexion
+        meta(charset="utf-8")
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    body
+     include nav.pug
+     #container
+        #content
+          .row.no-gutters
+            #background-logo.col
+                img(src='./assets/img/bamboo.jpg' alt='logo panda')
+            .col
+               form(action='/signup', method="post")
+                h3 Bienvenue
+                .form-group
+                    label(for='company-name') Pseudo
+                    input#company-name.form-control(type='text', name="username")
+                .form-group
+                    label(for='siret') Date de naissance
+                    input.form-control(type='text', name="birthday")
+                .form-group
+                    label(for='email') Email
+                    input#email.form-control(type='email', name="email")
+                .form-group
+                    label(for='password') Mot de passe
+                    input#password.form-control(type='password', name="mdp")
+                #send
+                    button.btn(type='submit')
+                     | Créer mon compte

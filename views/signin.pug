@@ -1,0 +1,25 @@
+html
+    head
+        title Inscription
+        meta(charset="utf-8")
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+    body
+     include nav.pug
+     #container
+        #content
+          .row.no-gutters
+            #background-logo.col-sm.d-none.d-sm-block
+                img(src='./assets/img/bamboo.jpg' alt='logo panda')
+            .col
+               form(action='/signin', method="post")
+                h3 Indentifies toi
+                .form-group
+                    label(for='company-name') Pseudo
+                    input#company-name.form-control(type='text', name="username")
+                .form-group
+                    label(for='password') Mot de passe
+                    input#password.form-control(type='password', name="mdp")
+                #send
+                    button.btn(type='submit')
+                     | Connexion
